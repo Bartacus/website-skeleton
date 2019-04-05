@@ -1,0 +1,102 @@
+{
+    "name": "bartacus/website-skeleton",
+    "type": "project",
+    "license": "GPL-3.0+",
+    "description": "A TYPO3 v9 project with Symfony",
+    "require": {
+        "php": "^7.2",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "ext-mbstring": "*",
+        "bartacus/bartacus-bundle": "^2.0",
+        "bartacus/twig-bundle": "^1.0",
+        "helhum/typo3-console": "^5.5.5",
+        "swiftmailer/swiftmailer": "6.2.0 as 5.4.12",
+        "symfony/asset": "*",
+        "symfony/console": "*",
+        "symfony/dotenv": "*",
+        "symfony/finder": "*",
+        "symfony/flex": "^1.1",
+        "symfony/form": "*",
+        "symfony/framework-bundle": "*",
+        "symfony/swiftmailer-bundle": "^3.1",
+        "symfony/translation": "*",
+        "symfony/twig-bundle": "*",
+        "symfony/validator": "*",
+        "symfony/yaml": "*",
+        "typo3/cms-belog": "^9.5",
+        "typo3/cms-beuser": "^9.5",
+        "typo3/cms-context-help": "^9.5",
+        "typo3/cms-impexp": "^9.5",
+        "typo3/cms-info": "^9.5",
+        "typo3/cms-info-pagetsconfig": "^9.5",
+        "typo3/cms-lowlevel": "^9.5",
+        "typo3/cms-redirects": "^9.5",
+        "typo3/cms-reports": "^9.5",
+        "typo3/cms-rte-ckeditor": "^9.5",
+        "typo3/cms-scheduler": "^9.5",
+        "typo3/cms-seo": "^9.5",
+        "typo3/cms-setup": "^9.5",
+        "typo3/cms-sys-note": "^9.5",
+        "typo3/cms-t3editor": "^9.5",
+        "typo3/cms-tstemplate": "^9.5",
+        "typo3/cms-viewpage": "^9.5",
+        "typo3/minimal": "^9.5"
+    },
+    "require-dev": {
+        "symfony/debug-bundle": "*",
+        "symfony/maker-bundle": "^1.0",
+        "symfony/var-dumper": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        }
+    ],
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "paragonie/random_compat": "2.*",
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-mbstring": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
+    },
+    "scripts": {
+        "auto-scripts": [
+        ],
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true,
+            "require": "4.2.*"
+        }
+    }
+}
